@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Раздел 7</title>
+		<link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+		
+		<link href="../style/style.css" rel="stylesheet">
+		
+		<script>
+			function check()
+				{
+				var str = new Array();
+				str[1]= document.getElementById("span_1").innerHTML.length;
+				str[2]= document.getElementById("span_2").innerHTML.length;
+				str[3]= document.getElementById("span_3").innerHTML.length;
+
+				if (str[1] > str[2] && str[1] > str[3])
+						{
+					alert(document.getElementById("span_1").innerHTML);
+						}
+				else
+						{
+					if (str[2] > str[1] && str[2] > str[3])
+						{
+						alert(document.getElementById("span_2").innerHTML);
+						}
+					else 
+						{
+						alert('Самая длинная строка: ' + document.getElementById("span_3").innerHTML);
+						}
+					}
+				}
+		</script>
+		
+		<style>
+			.data span
+				{
+				font-size: 30px;
+				}
+				
+			.data p
+				{
+				font-size: 16px;
+				}
+		</style>
+	</head>
+	
+	<body>
+		<div class="main">
+			
+			<div class="login">
+				<select onchange="document.location=this.options[this.selectedIndex].value">
+					<option value="#">Какой раздел вы хотите посетить?</option>
+					<option value="../index.html">Главная</option>
+					<option value="section_1.html">Раздел 1</option>
+					<option value="section_2.html">Раздел 2</option>
+					<option value="section_3.html">Раздел 3</option>
+					<option value="section_4.html">Раздел 4</option>
+					<option value="section_5.html">Раздел 5</option>
+					<option value="section_6.html">Раздел 6</option>
+					<option value="section_7.html">Раздел 7</option>
+					<option value="section_8.html">Раздел 8</option>
+					<option value="section_9.html">Раздел 9</option>
+					<option value="section_10.html">Раздел 10</option>
+					<option value="section_11.html">Раздел 11</option>
+					<option value="section_12.html">Раздел 12</option>
+                    <option value="chart.html">Карта</option>
+                    <option value="map-image.html">Карта-изображений</option>
+                    <option value="display.html">Отображение</option>
+				</select>
+				
+				<a href="section_2.html"><p>Вход/Регистрация</p></a>
+			</div>
+			
+			<div class="header">
+				<p>Раздел 7</p>
+				<img src="../images/icon.gif" alt="Ошибка" title="Логотип" width="70px" height="70px">
+			</div>
+			
+			<div class="data" align="center">
+				<p>Данная функция на JS срабатывает следующим образом: она сравнивает все строки по клике хотя бы на одну из них и выдает содержимое самой большой по объему ячейки в уведомлении.</p>
+				<br>
+				<span id="span_1" onclick="check();">Строка №1: Хазимуратов</span>
+				<br>
+				<span id="span_2" onclick="check();">Строка №2: Хазимуратов Руслан</span>
+				<br>
+				<span id="span_3" onclick="check();">Строка №3: Хазимуратов Руслан Рустамович</span>
+			</div>
+			
+			<div class="footer"><p>&copy; Хазимуратов Руслан Группа ИЗ-22 2017 г.</p></div>
+		</div>
+	</body>
+</html>

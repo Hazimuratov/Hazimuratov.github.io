@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Раздел 8</title>
+		<link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+		
+		<link href="../style/style.css" rel="stylesheet">
+		
+		<script>
+			function val_group()
+				{
+				test_sw=0;
+				n_elem=document.forms[0].length;
+				
+				for (i=0; i<(n_elem-1); i++)
+					{
+					elem=document.forms[0].elements[i].value;
+				
+					if (elem=="")
+						{
+						test_sw++;
+						document.getElementById("span_input_" + i).style.visibility="visible";
+						}
+					else
+						{
+						document.getElementById("span_input_" + i).style.visibility="hidden";
+						}
+					}
+				if (test_sw > 0)
+					{
+					alert ("Количество незаполненных полей " + test_sw);
+					return false;
+					}
+				else 
+					return true;
+				}
+		</script>
+		
+		<style>
+			.registration
+				{
+				height: 40px;
+				width: 220px;
+				background-image: url("../images/registration.png");
+				background-color: #FFFFF0;
+				background-position: 95% 50%;
+				background-repeat: no-repeat;
+				font-family: Century Gothic, sans-serif;
+				font-size: 15px;
+				border: 1px solid#A9A9A9;
+				border-radius: 20px;
+				margin-top: 20px;
+				}
+			
+			.input
+				{
+				background-color: #FFF;
+				font-family: Century Gothic, sans-serif;
+				font-size: 20px;
+				border: 1px solid #A9A9A9;
+				border-radius: 5px;
+				text-indent: 10px;
+				margin-top: 10px;
+				margin-left: 154px;
+				}
+				
+			.data span
+				{
+				color: red;
+				visibility: hidden;
+				}
+				
+			.data p
+				{
+				font-size: 16px;
+				}
+		</style>
+	</head>
+	
+	<body>
+		<div class="main">
+			
+			<div class="login">
+				<select onchange="document.location=this.options[this.selectedIndex].value">
+					<option value="#">Какой раздел вы хотите посетить?</option>
+					<option value="../index.html">Главная</option>
+					<option value="section_1.html">Раздел 1</option>
+					<option value="section_2.html">Раздел 2</option>
+					<option value="section_3.html">Раздел 3</option>
+					<option value="section_4.html">Раздел 4</option>
+					<option value="section_5.html">Раздел 5</option>
+					<option value="section_6.html">Раздел 6</option>
+					<option value="section_7.html">Раздел 7</option>
+					<option value="section_8.html">Раздел 8</option>
+					<option value="section_9.html">Раздел 9</option>
+					<option value="section_10.html">Раздел 10</option>
+					<option value="section_11.html">Раздел 11</option>
+					<option value="section_12.html">Раздел 12</option>
+                    <option value="chart.html">Карта</option>
+                    <option value="map-image.html">Карта-изображений</option>
+                    <option value="display.html">Отображение</option>
+				</select>
+				
+				<a href="section_2.html"><p>Вход/Регистрация</p></a>
+			</div>
+			
+			<div class="header">
+				<p>Раздел 8</p>
+				<img src="../images/icon.gif" alt="Ошибка" title="Логотип" width="70px" height="70px">
+			</div>
+			
+			<div class="data" align="center">
+				<p>Данная функция на JS срабатывает следующим образом: она проверяет заполненность полей и если не все поля заполнены, то в уведомлении указывает число незаполненных полей, а так же выводит соответсвующий текст напротив каждого поля.</p>
+				<br>
+				<form action= "file.php" method="POST" onsubmit="return val_group();">
+					<input type="text" id="input_0" placeholder="Логин" class="input">
+					<span id="span_input_0">Заполните это поле</span>
+					<br>
+					<input type="text" id="input_1" placeholder="Пароль" class="input">
+					<span id="span_input_1">Заполните это поле</span>
+					<br>
+					<input type="text" id="input_2" placeholder="Email" class="input">
+					<span id="span_input_2">Заполните это поле</span>
+					<br>
+					<input type="text" id="input_3" placeholder="Телефон" class="input">
+					<span id="span_input_3">Заполните это поле</span>
+					<br>
+					<input type="text" id="input_4" placeholder="Город" class="input">
+					<span id="span_input_4">Заполните это поле</span>
+					<br>
+					<input type="text" id="input_5" placeholder="IP" class="input">
+					<span id="span_input_5">Заполните это поле</span>
+					<br>
+					<input type="submit" class="registration" value="Зарегистрироваться">
+				</form>
+			</div>
+			
+			<div class="footer"><p>&copy; Хазимуратов Руслан Группа ИЗ-22 2017 г.</p></div>
+		</div>
+	</body>
+</html>

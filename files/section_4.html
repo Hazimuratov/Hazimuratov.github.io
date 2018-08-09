@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Раздел 4</title>
+		<link rel="shortcut icon" href="../images/favicon.png" type="image/png">
+		
+		<link href="../style/style.css" rel="stylesheet">
+		
+		<style>
+			.input
+				{
+				background-color: #FFF;
+				font-family: Century Gothic, sans-serif;
+				font-size: 20px;
+				border: 1px solid #A9A9A9;
+				border-radius: 5px;
+				text-indent: 10px;
+				margin-left: 10px;
+				}
+			
+			.clear_all
+				{
+				height: 40px;
+				width: 200px;
+				background-image: url("../images/clear_all.png");
+				background-color: #FFF;
+				background-position: 95% 50%;
+				background-repeat: no-repeat;
+				font-family: Century Gothic, sans-serif;
+				font-size: 15px;
+				border: 1px solid #A9A9A9;
+				border-radius: 20px;
+				margin-right: 150px;
+				margin-left: 60px;
+				}
+			
+			.registration
+				{
+				height: 40px;
+				width: 220px;
+				background-image: url("../images/registration.png");
+				background-color: #FFFFF0;
+				background-position: 95% 50%;
+				background-repeat: no-repeat;
+				font-family: Century Gothic, sans-serif;
+				font-size: 15px;
+				border: 1px solid#A9A9A9;
+				border-radius: 20px;
+				}
+				
+			.data form
+				{
+				margin-left: 60px;
+				}
+				
+			.data select
+				{
+				width: 150px;
+				height: 28px;
+				font-size: 12px;
+				border-radius: 20px;
+				margin-top: 9px;
+				font: 0.92em Century Gothic, sans-serif;
+				}
+				
+			.data p
+				{
+				float: left;
+				}
+		</style>
+	</head>
+	
+	<body>
+		<div class="main">
+			
+			<div class="login">
+				<select onchange="document.location=this.options[this.selectedIndex].value">
+					<option value="#">Какой раздел вы хотите посетить?</option>
+					<option value="../index.html">Главная</option>
+					<option value="section_1.html">Раздел 1</option>
+					<option value="section_2.html">Раздел 2</option>
+					<option value="section_3.html">Раздел 3</option>
+					<option value="section_4.html">Раздел 4</option>
+					<option value="section_5.html">Раздел 5</option>
+					<option value="section_6.html">Раздел 6</option>
+					<option value="section_7.html">Раздел 7</option>
+					<option value="section_8.html">Раздел 8</option>
+					<option value="section_9.html">Раздел 9</option>
+					<option value="section_10.html">Раздел 10</option>
+					<option value="section_11.html">Раздел 11</option>
+					<option value="section_12.html">Раздел 12</option>
+                    <option value="chart.html">Карта</option>
+                    <option value="map-image.html">Карта-изображений</option>
+                    <option value="display.html">Отображение</option>
+				</select>
+				
+				<a href="section_2.html"><p>Вход/Регистрация</p></a>
+			</div>
+			
+			<div class="header">
+				<p>Раздел 4</p>
+				<img src="../images/icon.gif" alt="Ошибка" title="Логотип" width="70px" height="70px">
+			</div>
+			
+			<div class="data">
+				<form>
+					<input type="text" height ="40px" width="200px" class="input" required placeholder="Фамилия">
+					<input type="text" height ="40px" width="200px" class="input" required placeholder="Имя">
+					<input type="text" height ="40px" width="200px" class="input" placeholder="Отчество">
+					<br><br>
+					
+					<p>С какими операционными системами вы знакомы?</p>
+					<br><br><br>
+					<input type="checkbox" name="Windows" value="Windows">Windows<br>
+					<input type="checkbox" name="MacOs" value="MacOs">MacOs<br>
+					<input type="checkbox" name="Linux" value="Linux">Linux<br>
+					<br>
+					
+					<p>С какими языками программирования вы знакомы?</p>
+					<br><br><br>
+					<input type="checkbox" name="С++" value="С++">С++<br>
+					<input type="checkbox" name="С" value="С">С<br>
+					<input type="checkbox" name="Java" value="Java">Java<br>
+					<br>
+					
+					<p>С какими компиляторами вы работали?</p>
+					<br><br><br>
+					<input type="checkbox" name="Microsoft Visual C++" value="Microsoft Visual C++">Microsoft Visual C++<br>
+					<input type="checkbox" name="Eclipse" value="Eclipse">Eclipse<br>
+					<input type="checkbox" name="CodeBlocks" value="CodeBlocks">CodeBlocks<br>
+					<br>
+					
+					<p>Какая операцияонная система у вас на телефоне?</p>
+					<br><br><br>
+					<input type="checkbox" name="Android" value="Android">Android<br>
+					<input type="checkbox" name="iOS" value="iOS">iOS<br>
+					<input type="checkbox" name="Windows Phone" value="Windows Phone">Windows Phone<br>
+					<br>
+					
+					<p>Укажите ваш пол</p>
+					<br><br><br>
+					<input type="radio" required name="sex" value="male"> Мужчина<br>
+					<input type="radio" name="sex" value="female"> Женщина<br>
+					<br>
+					
+					<p>Семейное положение</p>
+					<br><br><br>
+					<input type="radio" name="family" value="married"> Женат/Замужем<br>
+					<input type="radio" name="family" value="single"> Не женат/замужем<br>
+					<br>
+					
+					<p>Наличие детей</p>
+					<br><br><br>
+					<input type="radio" name="child" value="yes"> Да<br>
+					<input type="radio" name="child" value="no"> Нет<br>
+					<br>
+					
+					<p>Уровень знания HTML&CSS:&#160;&#160;&#160;&#160;</p>
+					<select>
+						<option selected disabled>Выберите уровень</option>
+						<option value="Юниор">Юниор</option>
+						<option value="Мидл">Мидл</option>
+						<option value="Синьйор">Синьйор</option>
+					</select>
+					<br><br>
+					
+					<p>Уровень знания JavaScript:&#160;&#160;&#160;&#160;</p>
+					<select>
+						<option selected disabled>Выберите уровень</option>
+						<option value="Юниор">Юниор</option>
+						<option value="Мидл">Мидл</option>
+						<option value="Синьйор">Синьйор</option>
+					</select>
+					<br><br><br>
+					
+					<textarea class="input" cols="65" placeholder="Расскажите о себе..."></textarea>
+					<br><br><br>
+					
+					<input type="reset" class="clear_all" value="Очистить всё">
+					<input type="submit" class="registration" value="Зарегистрироваться">
+				</form>
+			</div>
+			
+			<div class="footer"><p>&copy; Хазимуратов Руслан Группа ИЗ-22 2017 г.</p></div>
+		</div>
+	</body>
+</html>
